@@ -3,13 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Astudity — Nigeria's Business Intelligence, Simplified. Real-time Nigerian capital market news, stock analysis, and business intelligence for investors, executives, and entrepreneurs." />
-  <title>Astudity — Nigeria's Business Intelligence, Simplified.</title>
+  <meta name="description" content="Astudity Limited is an institutional build partner helping governments, funds, and enterprises design, build, and transform institutions that last." />
+  <title>Astudity Limited — End-to-End Institutional Build</title>
   <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800,900&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
   <style>
-    /* ============================================================
-       CSS VARIABLES & BASE
-    ============================================================ */
     :root {
       --color-bg: #080808;
       --color-surface: #101010;
@@ -34,7 +31,7 @@
       --text-hero: clamp(3rem,     1rem    + 7vw,    8rem);
 
       --font-display: 'Cabinet Grotesk', sans-serif;
-      --font-body:    'Satoshi', sans-serif;
+      --font-body: 'Satoshi', sans-serif;
 
       --space-1: 0.25rem;
       --space-2: 0.5rem;
@@ -74,7 +71,6 @@
     p { text-wrap: pretty; }
     button { cursor: pointer; background: none; border: none; }
     a { text-decoration: none; color: inherit; }
-
     :focus-visible {
       outline: 2px solid var(--color-accent);
       outline-offset: 3px;
@@ -90,9 +86,6 @@
     }
     ::selection { background: rgba(245,197,24,0.2); color: #fff; }
 
-    /* ============================================================
-       SCROLL ANIMATIONS
-    ============================================================ */
     .reveal {
       opacity: 0;
       transform: translateY(28px);
@@ -103,15 +96,13 @@
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
 
-    /* ============================================================
-       PULSING LIVE DOT
-    ============================================================ */
     @keyframes pulse {
       0%, 100% { opacity: 1; transform: scale(1); }
       50% { opacity: 0.4; transform: scale(0.85); }
     }
     .live-dot {
-      width: 8px; height: 8px;
+      width: 8px;
+      height: 8px;
       background: var(--color-accent);
       border-radius: 50%;
       animation: pulse 1.8s ease-in-out infinite;
@@ -119,9 +110,6 @@
       flex-shrink: 0;
     }
 
-    /* ============================================================
-       LAYOUT UTILITIES
-    ============================================================ */
     .container {
       max-width: var(--content-default);
       margin-inline: auto;
@@ -143,9 +131,6 @@
       margin-bottom: var(--space-6);
     }
 
-    /* ============================================================
-       NAVIGATION
-    ============================================================ */
     .nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -156,9 +141,7 @@
       border-bottom: 1px solid rgba(255,255,255,0.07);
       transition: border-color var(--transition);
     }
-    .nav.scrolled {
-      border-bottom: 1px solid rgba(255,255,255,0.12);
-    }
+    .nav.scrolled { border-bottom: 1px solid rgba(255,255,255,0.12); }
     .nav-inner {
       display: flex;
       align-items: center;
@@ -173,7 +156,6 @@
       display: flex;
       align-items: center;
       gap: var(--space-3);
-      text-decoration: none;
       flex-shrink: 0;
     }
     .nav-logo-text {
@@ -199,12 +181,7 @@
       padding: 4px 0;
     }
     .nav-links a:hover,
-    .nav-links a.active {
-      color: #fff;
-    }
-    .nav-links a.active {
-      font-weight: 700;
-    }
+    .nav-links a.active { color: #fff; }
     .nav-cta {
       font-family: var(--font-display);
       font-weight: 700;
@@ -242,98 +219,86 @@
     }
     .nav-mobile-menu.open { display: flex; }
     .nav-mobile-menu a {
-      display: flex;
-      align-items: center;
-      height: 48px;
-      font-family: var(--font-body);
-      font-weight: 500;
-      font-size: var(--text-base);
-      color: var(--color-text-muted);
-      transition: color var(--transition);
+      color: #fff;
+      padding: 10px 0;
       border-bottom: 1px solid rgba(255,255,255,0.05);
     }
-    .nav-mobile-menu a:last-child { border-bottom: none; }
-    .nav-mobile-menu a:hover { color: #fff; }
     .nav-mobile-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
       margin-top: var(--space-4);
-      width: 100%;
-      height: 52px;
+      background: var(--color-accent);
+      color: #000 !important;
+      padding: 14px 18px !important;
+      border-radius: var(--radius-sm);
+      text-align: center;
       font-family: var(--font-display);
       font-weight: 700;
-      font-size: var(--text-base);
-      background: var(--color-accent);
-      color: #000;
-      border-radius: var(--radius-sm);
-      transition: background var(--transition);
-    }
-    .nav-mobile-cta:hover { background: var(--color-accent-hover); }
-
-    @media (max-width: 1023px) {
-      .nav-links { display: none; }
-      .nav-cta { display: none; }
-      .nav-hamburger { display: flex; }
+      border-bottom: none !important;
     }
 
-    /* ============================================================
-       HERO SECTION
-    ============================================================ */
+    .brand-mark {
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+    }
+
     #home {
-      min-height: 100dvh;
-      background: #080808;
       position: relative;
+      min-height: 100vh;
       display: flex;
       align-items: center;
-      padding-top: 68px;
+      padding-top: 92px;
       overflow: hidden;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(245,197,24,0.08), transparent 38%),
+        radial-gradient(circle at 80% 30%, rgba(245,197,24,0.05), transparent 32%),
+        linear-gradient(180deg, #080808 0%, #090909 100%);
     }
     .hero-bg-orb {
       position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 55% 45% at 25% 55%, rgba(245,197,24,0.06) 0%, transparent 70%);
+      top: 10%;
+      right: -120px;
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, rgba(245,197,24,0.12), transparent 70%);
+      filter: blur(40px);
       pointer-events: none;
     }
     .hero-inner {
-      position: relative;
-      z-index: 1;
-      width: 100%;
       display: grid;
-      grid-template-columns: 55% 45%;
-      gap: var(--space-12);
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: clamp(var(--space-10), 6vw, var(--space-20));
       align-items: center;
-      padding-block: clamp(var(--space-12), 8vw, var(--space-24));
+      padding-block: clamp(var(--space-16), 10vw, 7rem);
     }
     .hero-badge {
       display: inline-flex;
       align-items: center;
-      gap: var(--space-2);
-      font-family: var(--font-body);
-      font-size: var(--text-xs);
-      font-weight: 500;
-      color: var(--color-accent);
-      border: 1px solid rgba(245,197,24,0.3);
-      padding: 6px 16px;
+      gap: 10px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 10px 16px;
       border-radius: 999px;
-      margin-bottom: var(--space-6);
-      width: fit-content;
+      color: var(--color-accent);
+      font-size: var(--text-xs);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: var(--space-8);
     }
     .hero-headline {
       font-family: var(--font-display);
       font-weight: 900;
       font-size: var(--text-hero);
-      line-height: 1.0;
-      color: #fff;
-      letter-spacing: -0.03em;
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      max-width: 10ch;
     }
     .hero-headline .accent { color: var(--color-accent); }
     .hero-sub {
-      font-family: var(--font-body);
       font-weight: 400;
       font-size: var(--text-lg);
       color: var(--color-text-muted);
-      max-width: 480px;
+      max-width: 640px;
       margin-top: var(--space-6);
       line-height: 1.65;
     }
@@ -347,6 +312,7 @@
     .btn-primary {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       font-family: var(--font-display);
       font-weight: 700;
       font-size: var(--text-sm);
@@ -365,6 +331,7 @@
     .btn-ghost {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       font-family: var(--font-display);
       font-weight: 700;
       font-size: var(--text-sm);
@@ -393,9 +360,7 @@
       padding-block: var(--space-3);
     }
     .hero-stat:first-child { padding-left: 0; }
-    .hero-stat + .hero-stat {
-      border-left: 1px solid rgba(255,255,255,0.1);
-    }
+    .hero-stat + .hero-stat { border-left: 1px solid rgba(255,255,255,0.1); }
     .hero-stat-value {
       font-family: var(--font-display);
       font-weight: 800;
@@ -411,8 +376,6 @@
       color: var(--color-text-muted);
       margin-top: 4px;
     }
-
-    /* Hero news card */
     .hero-card {
       background: var(--color-surface);
       border: 1px solid var(--color-border);
@@ -443,11 +406,9 @@
       font-weight: 500;
     }
     .hero-news-item {
-      padding-block: var(--space-5);
+      padding-block: 18px;
     }
-    .hero-news-item + .hero-news-item {
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
+    .hero-news-item + .hero-news-item { border-top: 1px solid rgba(255,255,255,0.06); }
     .hero-news-tag {
       display: inline-block;
       font-family: var(--font-body);
@@ -475,23 +436,6 @@
       margin-top: 6px;
     }
 
-    @media (max-width: 1023px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-        gap: var(--space-10);
-      }
-      .hero-card { max-width: 560px; }
-    }
-    @media (max-width: 639px) {
-      .hero-buttons { flex-direction: column; align-items: flex-start; }
-      .btn-primary, .btn-ghost { width: 100%; justify-content: center; }
-      .hero-stats { gap: var(--space-4); }
-      .hero-stat + .hero-stat { border-left: none; border-top: 1px solid rgba(255,255,255,0.1); padding-left: 0; }
-    }
-
-    /* ============================================================
-       SECTION BASE (ghost numbers)
-    ============================================================ */
     .section-wrap {
       position: relative;
       overflow: hidden;
@@ -511,18 +455,15 @@
     }
     .section-content { position: relative; z-index: 1; }
 
-    /* ============================================================
-       COVERAGE AREAS
-    ============================================================ */
-    #markets {
-      background: #080808;
+    #markets, #why, #news, #trust, #newsletter, #about {
       padding-block: clamp(var(--space-16), 8vw, var(--space-24));
     }
-    .coverage-header {
-      max-width: 640px;
+
+    .coverage-header, .trust-header, .news-header {
+      max-width: 760px;
       margin-bottom: clamp(var(--space-10), 5vw, var(--space-16));
     }
-    .coverage-heading {
+    .coverage-heading, .trust-heading, .news-heading, .about-heading, .why-heading {
       font-family: var(--font-display);
       font-weight: 800;
       font-size: var(--text-2xl);
@@ -530,164 +471,101 @@
       letter-spacing: -0.02em;
       line-height: 1.1;
     }
+
     .coverage-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 24px;
     }
     .coverage-card {
       background: var(--color-surface);
       border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
-      padding: 32px 28px;
+      border-radius: 12px;
+      padding: 26px;
+      transition: transform var(--transition), border-color var(--transition), background var(--transition);
+      min-height: 250px;
       display: flex;
       flex-direction: column;
-      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
-      cursor: default;
     }
     .coverage-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(245,197,24,0.4);
-      box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+      transform: translateY(-4px);
+      border-color: var(--color-border-hover);
+      background: var(--color-surface-2);
     }
     .coverage-num {
       font-family: var(--font-display);
-      font-weight: 700;
       font-size: var(--text-xs);
+      font-weight: 800;
       color: var(--color-accent);
-      letter-spacing: 0.06em;
-      margin-bottom: var(--space-4);
+      letter-spacing: 0.1em;
+      margin-bottom: var(--space-6);
     }
     .coverage-title {
       font-family: var(--font-display);
-      font-weight: 700;
       font-size: var(--text-lg);
+      font-weight: 700;
+      margin-bottom: var(--space-4);
       color: #fff;
-      line-height: 1.2;
     }
     .coverage-desc {
-      font-family: var(--font-body);
-      font-weight: 400;
-      font-size: var(--text-sm);
       color: var(--color-text-muted);
-      margin-top: var(--space-2);
       line-height: 1.65;
-      flex: 1;
+      font-size: var(--text-sm);
+      margin-top: auto;
     }
     .coverage-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      font-family: var(--font-body);
-      font-size: var(--text-sm);
-      font-weight: 500;
       color: var(--color-accent);
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
       margin-top: var(--space-6);
-      transition: gap var(--transition), color var(--transition);
-    }
-    .coverage-card:hover .coverage-link { gap: 8px; color: var(--color-accent-hover); }
-
-    @media (max-width: 1023px) {
-      .coverage-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 639px) {
-      .coverage-grid { grid-template-columns: 1fr; }
+      font-weight: 700;
     }
 
-    /* ============================================================
-       WHY ASTUDITY
-    ============================================================ */
-    #why {
-      background: #0d0d0d;
-      padding-block: clamp(var(--space-16), 8vw, var(--space-24));
-    }
-    .why-grid {
+    .why-grid, .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: clamp(var(--space-10), 6vw, var(--space-20));
       align-items: start;
     }
-    .why-heading {
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: var(--text-2xl);
-      color: #fff;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-      margin-bottom: var(--space-6);
-    }
-    .why-body {
-      font-family: var(--font-body);
-      font-weight: 400;
-      font-size: var(--text-base);
+    .why-body, .about-body p {
       color: var(--color-text-muted);
-      max-width: 460px;
       line-height: 1.75;
-      margin-bottom: var(--space-8);
+      max-width: 62ch;
+      margin-top: var(--space-6);
     }
+    .about-body p + p { margin-top: var(--space-4); }
     .why-team-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-family: var(--font-body);
-      font-size: var(--text-sm);
-      font-weight: 500;
+      display: inline-block;
+      margin-top: var(--space-6);
       color: var(--color-accent);
-      transition: gap var(--transition), color var(--transition);
+      font-weight: 700;
     }
-    .why-team-link:hover { gap: 10px; color: var(--color-accent-hover); }
     .why-features {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-8);
+      display: grid;
+      gap: 16px;
     }
     .why-feature {
-      display: grid;
-      grid-template-columns: 24px 1fr;
-      gap: var(--space-4);
-      align-items: start;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 22px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
     }
-    .why-feature-check {
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
+    .why-feature-check { flex-shrink: 0; margin-top: 2px; }
     .why-feature-title {
-      font-family: var(--font-body);
       font-weight: 700;
-      font-size: var(--text-base);
       color: #fff;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
     .why-feature-desc {
-      font-family: var(--font-body);
-      font-weight: 400;
-      font-size: var(--text-sm);
       color: var(--color-text-muted);
       line-height: 1.6;
+      font-size: var(--text-sm);
     }
 
-    @media (max-width: 1023px) {
-      .why-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ============================================================
-       LATEST NEWS
-    ============================================================ */
-    #news {
-      background: #080808;
-      padding-block: clamp(var(--space-16), 8vw, var(--space-24));
-    }
-    .news-header {
-      margin-bottom: clamp(var(--space-10), 5vw, var(--space-16));
-    }
-    .news-heading {
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: var(--text-2xl);
-      color: #fff;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-    }
     .news-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -696,484 +574,218 @@
     .news-card {
       background: var(--color-surface);
       border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+      border-radius: 12px;
+      padding: 28px;
+      min-height: 320px;
     }
-    .news-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(245,197,24,0.3);
-      box-shadow: 0 16px 40px rgba(0,0,0,0.4);
-    }
-    .news-card-banner {
-      height: 160px;
-      flex-shrink: 0;
-    }
-    .news-card-body {
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-    .news-category {
-      font-family: var(--font-body);
-      font-size: var(--text-xs);
-      font-weight: 700;
-      color: var(--color-accent);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-    .news-headline {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: var(--text-base);
-      color: #fff;
-      margin-top: var(--space-2);
-      line-height: 1.3;
-    }
-    .news-summary {
-      font-family: var(--font-body);
-      font-weight: 400;
-      font-size: var(--text-sm);
-      color: var(--color-text-muted);
-      margin-top: var(--space-2);
-      line-height: 1.7;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      flex: 1;
-    }
-    .news-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: var(--space-4);
-      padding-top: var(--space-4);
-      border-top: 1px solid rgba(255,255,255,0.05);
-    }
-    .news-time {
-      font-family: var(--font-body);
-      font-size: var(--text-xs);
-      color: #555;
-    }
-    .news-read-more {
-      font-family: var(--font-body);
-      font-size: var(--text-sm);
-      font-weight: 500;
-      color: var(--color-accent);
-      transition: color var(--transition), gap var(--transition);
+    .news-card-tag {
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 8px;
+      color: var(--color-accent);
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      margin-bottom: var(--space-5);
     }
-    .news-card:hover .news-read-more { color: var(--color-accent-hover); gap: 8px; }
-
-    @media (max-width: 1023px) {
-      .news-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 639px) {
-      .news-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ============================================================
-       TESTIMONIALS
-    ============================================================ */
-    #trust {
-      background: #0a0a0a;
-      padding-block: clamp(var(--space-16), 8vw, var(--space-24));
-    }
-    .trust-header {
-      margin-bottom: clamp(var(--space-10), 5vw, var(--space-14));
-    }
-    .trust-heading {
+    .news-card h3 {
       font-family: var(--font-display);
-      font-weight: 800;
-      font-size: var(--text-2xl);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      margin-bottom: var(--space-4);
       color: #fff;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
     }
+    .news-card p {
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      font-size: var(--text-sm);
+    }
+
     .testimonials-scroll {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: none;
-      -webkit-overflow-scrolling: touch;
-      padding-bottom: var(--space-4);
     }
-    .testimonials-scroll::-webkit-scrollbar { display: none; }
     .testimonial-card {
       background: var(--color-surface);
       border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
-      padding: 32px;
-      min-width: 360px;
-      max-width: 400px;
-      scroll-snap-align: start;
-      flex-shrink: 0;
-      transition: border-color var(--transition), box-shadow var(--transition);
-    }
-    .testimonial-card:hover {
-      border-color: rgba(245,197,24,0.3);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+      border-radius: 12px;
+      padding: 28px;
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
     }
     .testimonial-stars {
       color: var(--color-accent);
-      font-size: var(--text-sm);
-      letter-spacing: 2px;
+      letter-spacing: 0.15em;
+      margin-bottom: var(--space-5);
     }
     .testimonial-quote {
-      font-family: var(--font-body);
-      font-weight: 400;
-      font-size: var(--text-base);
-      color: #ccc;
-      margin-top: var(--space-4);
-      line-height: 1.8;
+      color: #d3d3d3;
+      line-height: 1.75;
+      font-size: var(--text-sm);
+      flex: 1;
     }
     .testimonial-author {
       display: flex;
       align-items: center;
-      gap: var(--space-4);
+      gap: 14px;
       margin-top: var(--space-6);
-      padding-top: var(--space-5);
-      border-top: 1px solid rgba(255,255,255,0.06);
     }
     .testimonial-avatar {
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
-      background: #1a1a1a;
-      border: 1px solid rgba(255,255,255,0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 0.8rem;
+      display: grid;
+      place-items: center;
+      background: rgba(245,197,24,0.12);
       color: var(--color-accent);
+      font-weight: 700;
       flex-shrink: 0;
     }
     .testimonial-name {
-      font-family: var(--font-body);
+      color: #fff;
       font-weight: 700;
       font-size: var(--text-sm);
-      color: #fff;
     }
     .testimonial-role {
-      font-family: var(--font-body);
-      font-weight: 400;
-      font-size: var(--text-xs);
       color: var(--color-text-muted);
-      margin-top: 2px;
+      font-size: var(--text-xs);
+      margin-top: 4px;
     }
 
-    /* ============================================================
-       NEWSLETTER / CTA BANNER
-    ============================================================ */
-    #newsletter {
-      background: linear-gradient(135deg, #f5c518 0%, #ffd84d 100%);
-      padding: clamp(4rem, 8vw, 7rem) 0;
-    }
     .newsletter-inner {
-      text-align: center;
+      background: linear-gradient(180deg, rgba(245,197,24,0.05), rgba(255,255,255,0.02));
+      border: 1px solid rgba(245,197,24,0.14);
+      border-radius: 16px;
+      padding: clamp(28px, 4vw, 48px);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      align-items: center;
     }
     .newsletter-heading {
       font-family: var(--font-display);
-      font-weight: 900;
-      font-size: var(--text-2xl);
-      color: #000;
-      letter-spacing: -0.02em;
-      line-height: 1.15;
-    }
-    .newsletter-sub {
-      font-family: var(--font-body);
-      font-weight: 500;
-      font-size: var(--text-base);
-      color: rgba(0,0,0,0.6);
-      margin-top: var(--space-3);
-    }
-    .newsletter-form {
-      display: flex;
-      align-items: stretch;
-      justify-content: center;
-      margin-top: var(--space-8);
-      flex-wrap: wrap;
-      gap: 0;
-      max-width: 520px;
-      margin-inline: auto;
-      margin-top: var(--space-8);
-    }
-    .newsletter-input {
-      flex: 1;
-      min-width: 220px;
-      max-width: 320px;
-      padding: 14px 20px;
-      border: none;
-      border-radius: var(--radius-sm) 0 0 var(--radius-sm);
-      background: #fff;
-      color: #000;
-      font-family: var(--font-body);
-      font-size: var(--text-base);
-      font-weight: 400;
-      outline: none;
-    }
-    .newsletter-input::placeholder { color: #aaa; }
-    .newsletter-btn {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: var(--text-sm);
-      background: #000;
-      color: #fff;
-      padding: 14px 28px;
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      border: none;
-      cursor: pointer;
-      transition: background var(--transition);
-      white-space: nowrap;
-    }
-    .newsletter-btn:hover { background: #111; }
-
-    @media (max-width: 639px) {
-      .newsletter-form { flex-direction: column; align-items: center; gap: 0; }
-      .newsletter-input {
-        border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-        max-width: 100%;
-        width: 100%;
-      }
-      .newsletter-btn {
-        border-radius: 0 0 var(--radius-sm) var(--radius-sm);
-        width: 100%;
-        text-align: center;
-      }
-    }
-
-    /* ============================================================
-       ABOUT SECTION
-    ============================================================ */
-    #about {
-      background: #080808;
-      padding-block: clamp(var(--space-16), 8vw, var(--space-24));
-    }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(var(--space-10), 6vw, var(--space-20));
-      align-items: start;
-    }
-    .about-heading {
-      font-family: var(--font-display);
       font-weight: 800;
-      font-size: var(--text-2xl);
-      color: #fff;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-      margin-bottom: var(--space-6);
+      font-size: clamp(2rem, 1.3rem + 2vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
     }
-    .about-body {
-      font-family: var(--font-body);
-      font-weight: 400;
-      font-size: var(--text-base);
+    .newsletter-copy {
       color: var(--color-text-muted);
-      line-height: 1.8;
+      line-height: 1.7;
+      max-width: 56ch;
+      margin-top: var(--space-4);
     }
-    .about-body p + p { margin-top: var(--space-5); }
+    .newsletter-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+      justify-content: flex-start;
+    }
+
     .contact-card {
       background: var(--color-surface);
       border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
-      padding: 36px;
+      border-radius: 12px;
+      padding: 30px;
     }
     .contact-card-title {
       font-family: var(--font-display);
-      font-weight: 700;
-      font-size: var(--text-lg);
-      color: #fff;
-      margin-bottom: var(--space-8);
+      font-size: var(--text-xl);
+      font-weight: 800;
+      margin-bottom: var(--space-6);
     }
     .contact-row {
       display: flex;
+      gap: 14px;
       align-items: flex-start;
-      gap: var(--space-4);
-      padding-block: var(--space-4);
+      padding-block: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
     }
-    .contact-row + .contact-row {
-      border-top: 1px solid rgba(255,255,255,0.05);
-    }
-    .contact-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--color-accent);
-      flex-shrink: 0;
-      margin-top: 6px;
-    }
+    .contact-row:last-of-type { border-bottom: none; }
     .contact-icon {
       flex-shrink: 0;
-      color: var(--color-accent);
-      margin-top: 2px;
+      margin-top: 3px;
     }
     .contact-text {
-      font-family: var(--font-body);
-      font-weight: 400;
-      font-size: var(--text-sm);
       color: var(--color-text-muted);
-      line-height: 1.65;
+      line-height: 1.7;
+      font-size: var(--text-sm);
     }
-    .contact-text a {
-      color: var(--color-accent);
-      transition: color var(--transition);
-    }
-    .contact-text a:hover { color: var(--color-accent-hover); }
     .contact-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      padding: 14px 28px;
       margin-top: var(--space-6);
+      width: 100%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
       background: var(--color-accent);
       color: #000;
       font-family: var(--font-display);
       font-weight: 700;
-      font-size: var(--text-sm);
+      padding: 16px 24px;
       border-radius: var(--radius-sm);
-      border: none;
-      cursor: pointer;
       transition: background var(--transition), transform var(--transition);
     }
     .contact-btn:hover {
       background: var(--color-accent-hover);
-      transform: translateY(-1px);
+      transform: translateY(-2px);
     }
 
-    @media (max-width: 1023px) {
-      .about-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ============================================================
-       FOOTER
-    ============================================================ */
     footer {
-      background: #050505;
-      border-top: 1px solid rgba(255,255,255,0.05);
-      padding-top: clamp(var(--space-12), 6vw, var(--space-20));
-      padding-bottom: var(--space-8);
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr 1fr;
-      gap: 48px;
-      margin-bottom: clamp(var(--space-10), 5vw, var(--space-16));
-    }
-    .footer-tagline {
-      font-family: var(--font-body);
-      font-weight: 400;
-      font-size: var(--text-sm);
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 28px 0 36px;
       color: var(--color-text-muted);
-      max-width: 220px;
-      line-height: 1.65;
-      margin-top: var(--space-4);
     }
-    .footer-socials {
+    .footer-inner {
       display: flex;
-      gap: var(--space-4);
-      margin-top: var(--space-6);
-    }
-    .footer-social {
-      display: flex;
+      justify-content: space-between;
+      gap: 20px;
       align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      color: var(--color-text-muted);
-      transition: color var(--transition);
-    }
-    .footer-social:hover { color: var(--color-accent); }
-    .footer-col-heading {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: var(--text-sm);
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: var(--space-4);
+      flex-wrap: wrap;
     }
     .footer-links {
       display: flex;
-      flex-direction: column;
-    }
-    .footer-links a {
-      font-family: var(--font-body);
-      font-weight: 400;
-      font-size: var(--text-sm);
-      color: var(--color-text-muted);
-      line-height: 2.2;
-      transition: color var(--transition);
-    }
-    .footer-links a:hover { color: var(--color-accent); }
-    .footer-contact-item {
-      font-family: var(--font-body);
-      font-weight: 400;
-      font-size: var(--text-sm);
-      color: var(--color-text-muted);
-      line-height: 1.8;
-      margin-bottom: var(--space-2);
-    }
-    .footer-contact-item a {
-      color: var(--color-text-muted);
-      transition: color var(--transition);
-    }
-    .footer-contact-item a:hover { color: var(--color-accent); }
-    .footer-bottom {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-top: 1px solid rgba(255,255,255,0.05);
-      padding-top: var(--space-6);
+      gap: 18px;
       flex-wrap: wrap;
-      gap: var(--space-3);
     }
-    .footer-bottom span {
-      font-family: var(--font-body);
-      font-weight: 400;
-      font-size: var(--text-xs);
-      color: #555;
-    }
+    .footer-links a:hover { color: #fff; }
 
+    @media (max-width: 1100px) {
+      .coverage-grid { grid-template-columns: repeat(2, 1fr); }
+      .news-grid { grid-template-columns: 1fr; }
+      .testimonials-scroll { grid-template-columns: 1fr; }
+      .newsletter-inner { grid-template-columns: 1fr; }
+    }
     @media (max-width: 1023px) {
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .nav-links, .nav-cta { display: none; }
+      .nav-hamburger { display: inline-flex; }
+      .hero-inner, .why-grid, .about-grid { grid-template-columns: 1fr; gap: var(--space-10); }
+      .hero-card { max-width: 560px; }
     }
     @media (max-width: 639px) {
-      .footer-grid { grid-template-columns: 1fr; gap: 24px; }
-      .footer-bottom { flex-direction: column; align-items: flex-start; }
-    }
-
-    /* ============================================================
-       LOGO BRAND MARK
-    ============================================================ */
-    .brand-mark {
-      width: 32px;
-      height: 32px;
-      flex-shrink: 0;
+      .hero-buttons, .newsletter-actions { flex-direction: column; align-items: stretch; }
+      .btn-primary, .btn-ghost { width: 100%; }
+      .hero-stats { gap: var(--space-4); }
+      .hero-stat { padding-left: 0; }
+      .hero-stat + .hero-stat {
+        border-left: none;
+        border-top: 1px solid rgba(255,255,255,0.1);
+      }
+      .coverage-grid { grid-template-columns: 1fr; }
+      .hero-headline { max-width: none; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
 
-<!-- SKIP LINK -->
 <a href="#main-content" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Skip to main content</a>
 
-<!-- ============================================================
-     NAVIGATION
-============================================================ -->
 <header>
   <nav class="nav" id="main-nav" aria-label="Main navigation">
     <div class="nav-inner">
-      <!-- Logo -->
       <a href="#home" class="nav-logo" aria-label="Astudity home">
         <svg class="brand-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect width="32" height="32" rx="6" fill="#f5c518" opacity="0.12"/>
@@ -1182,18 +794,16 @@
         <span class="nav-logo-text">Astudity</span>
       </a>
 
-      <!-- Desktop nav links -->
       <nav class="nav-links" aria-label="Site sections">
-        <a href="#markets" data-nav-section="markets">Markets</a>
-        <a href="#news" data-nav-section="news">News</a>
-        <a href="#analysis" data-nav-section="analysis">Analysis</a>
         <a href="#about" data-nav-section="about">About</a>
-        <a href="#about" data-nav-section="contact">Contact</a>
+        <a href="#markets" data-nav-section="capabilities">Capabilities</a>
+        <a href="#news" data-nav-section="approach">Approach</a>
+        <a href="#trust" data-nav-section="clients">Clients</a>
+        <a href="#contact" data-nav-section="contact">Contact</a>
       </nav>
 
-      <a href="#newsletter" class="nav-cta">Subscribe</a>
+      <a href="#contact" class="nav-cta">Talk to Our Team</a>
 
-      <!-- Hamburger -->
       <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu" id="hamburger-btn">
         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" id="hamburger-icon">
           <line x1="3" y1="6" x2="19" y2="6"/>
@@ -1203,86 +813,76 @@
       </button>
     </div>
 
-    <!-- Mobile menu -->
     <div class="nav-mobile-menu" id="mobile-menu" role="menu" aria-label="Mobile navigation">
-      <a href="#markets" role="menuitem">Markets</a>
-      <a href="#news" role="menuitem">News</a>
-      <a href="#about" role="menuitem">Analysis</a>
       <a href="#about" role="menuitem">About</a>
-      <a href="#about" role="menuitem">Contact</a>
-      <a href="#newsletter" class="nav-mobile-cta" role="menuitem">Subscribe Free</a>
+      <a href="#markets" role="menuitem">Capabilities</a>
+      <a href="#news" role="menuitem">Approach</a>
+      <a href="#trust" role="menuitem">Clients</a>
+      <a href="#contact" role="menuitem">Contact</a>
+      <a href="#contact" class="nav-mobile-cta" role="menuitem">Talk to Our Team</a>
     </div>
   </nav>
 </header>
 
-<!-- ============================================================
-     MAIN CONTENT
-============================================================ -->
 <main id="main-content">
-
-  <!-- HERO -->
   <section id="home" aria-label="Hero">
     <div class="hero-bg-orb" aria-hidden="true"></div>
     <div class="container">
       <div class="hero-inner">
-        <!-- Left column -->
         <div>
-          <div class="hero-badge reveal">
-            ✦ Nigeria's Financial Intelligence Platform
-          </div>
+          <div class="hero-badge reveal">✦ Institutional Build Partner</div>
           <h1 class="hero-headline reveal reveal-delay-1">
-            Stay Ahead<br>of Every<br><span class="accent">Market Move.</span>
+            End-to-End<br>Institutional Build<br><span class="accent">for a Changing World.</span>
           </h1>
           <p class="hero-sub reveal reveal-delay-2">
-            Real-time Nigerian capital market news, stock analysis, and business intelligence — built for investors, executives, and entrepreneurs.
+            We design, build, and transform institutions that last. From strategy to operations, governance to technology, PPP to investor readiness — we deliver full-spectrum institutional development for governments, funds, and enterprises.
           </p>
           <div class="hero-buttons reveal reveal-delay-2">
-            <a href="#news" class="btn-primary">Read Today's News →</a>
-            <a href="#markets" class="btn-ghost">Our Analysis</a>
+            <a href="#news" class="btn-primary">Explore Our Approach</a>
+            <a href="#contact" class="btn-ghost">Talk to Our Team</a>
           </div>
           <div class="hero-stats reveal reveal-delay-3">
             <div class="hero-stat">
-              <div class="hero-stat-value">50,000+</div>
-              <div class="hero-stat-label">Readers</div>
+              <div class="hero-stat-value">8</div>
+              <div class="hero-stat-label">Core Capabilities</div>
             </div>
             <div class="hero-stat">
-              <div class="hero-stat-value">Daily</div>
-              <div class="hero-stat-label">Market Updates</div>
+              <div class="hero-stat-value">End-to-End</div>
+              <div class="hero-stat-label">Delivery Model</div>
             </div>
             <div class="hero-stat">
-              <div class="hero-stat-value">100%</div>
-              <div class="hero-stat-label">Free Access</div>
+              <div class="hero-stat-value">Global + Local</div>
+              <div class="hero-stat-label">Operating Lens</div>
             </div>
           </div>
         </div>
 
-        <!-- Right column: news card mockup -->
         <div class="reveal reveal-delay-2">
-          <div class="hero-card" role="complementary" aria-label="Latest news preview">
+          <div class="hero-card" role="complementary" aria-label="Institutional build overview">
             <div class="hero-card-header">
-              <span class="hero-card-title">Latest Updates</span>
+              <span class="hero-card-title">What We Build</span>
               <span class="hero-card-live" aria-live="polite">
                 <span class="live-dot" aria-hidden="true"></span>
-                Live
+                Active
               </span>
             </div>
 
             <article class="hero-news-item">
-              <span class="hero-news-tag tag-markets">MARKETS</span>
-              <p class="hero-news-headline">NGX All-Share Index climbs 2.3% as banking stocks lead rally</p>
-              <time class="hero-news-time" datetime="2026-05-29">Today · 8:42 AM WAT</time>
+              <span class="hero-news-tag tag-markets">Strategy</span>
+              <h3 class="hero-news-headline">Institutional strategy aligned to structure, operations, governance, and execution.</h3>
+              <div class="hero-news-time">Designed for performance</div>
             </article>
 
             <article class="hero-news-item">
-              <span class="hero-news-tag tag-banking">BANKING</span>
-              <p class="hero-news-headline">CBN holds MPR at 27.5% amid persistent inflation concerns</p>
-              <time class="hero-news-time" datetime="2026-05-29">Today · 7:15 AM WAT</time>
+              <span class="hero-news-tag tag-banking">PPP + Capital</span>
+              <h3 class="hero-news-headline">Bankable partnerships, investor readiness, and capital engagement built into the model from the start.</h3>
+              <div class="hero-news-time">Built for confidence</div>
             </article>
 
             <article class="hero-news-item">
-              <span class="hero-news-tag tag-economy">ECONOMY</span>
-              <p class="hero-news-headline">Nigeria's GDP expands 3.8% in Q1 2026, outpacing forecasts</p>
-              <time class="hero-news-time" datetime="2026-05-29">Yesterday · 5:00 PM WAT</time>
+              <span class="hero-news-tag tag-economy">Operations + Teams</span>
+              <h3 class="hero-news-headline">Technology deployment, process redesign, and capability transfer that stay after implementation ends.</h3>
+              <div class="hero-news-time">Built for permanence</div>
             </article>
           </div>
         </div>
@@ -1290,113 +890,106 @@
     </div>
   </section>
 
-  <!-- COVERAGE AREAS -->
   <section id="markets" class="section-wrap" aria-labelledby="coverage-heading">
     <span class="ghost-number" aria-hidden="true">01</span>
     <div class="section-content">
-      <div class="container" style="padding-block: clamp(4rem, 8vw, 6rem);">
+      <div class="container">
         <div class="coverage-header">
-          <div class="section-badge reveal">What We Cover</div>
+          <div class="section-badge reveal">Core Capabilities</div>
           <h2 class="coverage-heading reveal reveal-delay-1" id="coverage-heading">
-            Deep coverage across<br>Nigeria's financial landscape.
+            The 8 pillars of<br>institutional build.
           </h2>
         </div>
         <div class="coverage-grid">
           <article class="coverage-card reveal reveal-delay-1">
             <span class="coverage-num">01</span>
-            <h3 class="coverage-title">NGX &amp; Capital Markets</h3>
-            <p class="coverage-desc">Live stock data, NGX listings, equity analysis, and market indices.</p>
-            <span class="coverage-link" aria-hidden="true">Explore →</span>
+            <h3 class="coverage-title">Strategic Business Transformation</h3>
+            <p class="coverage-desc">Reframe the business model, align strategy with execution, and move from intent to measurable impact.</p>
+            <span class="coverage-link" aria-hidden="true">Roadmaps • KPIs • Change</span>
           </article>
           <article class="coverage-card reveal reveal-delay-2">
             <span class="coverage-num">02</span>
-            <h3 class="coverage-title">Banking &amp; Finance</h3>
-            <p class="coverage-desc">Tier-1 bank earnings, CBN policy, interest rates, and lending news.</p>
-            <span class="coverage-link" aria-hidden="true">Explore →</span>
+            <h3 class="coverage-title">Institutional Development</h3>
+            <p class="coverage-desc">Design mandates, structures, processes, policies, and accountability systems that function under pressure.</p>
+            <span class="coverage-link" aria-hidden="true">Structure • Process • Accountability</span>
           </article>
           <article class="coverage-card reveal reveal-delay-3">
             <span class="coverage-num">03</span>
-            <h3 class="coverage-title">Macroeconomics</h3>
-            <p class="coverage-desc">GDP, inflation, FX rates, trade balance, and Nigeria's economic outlook.</p>
-            <span class="coverage-link" aria-hidden="true">Explore →</span>
+            <h3 class="coverage-title">Technology Deployment</h3>
+            <p class="coverage-desc">Select and integrate systems that digitize workflows, improve data quality, and lower delivery cost.</p>
+            <span class="coverage-link" aria-hidden="true">Systems • Data • Workflows</span>
           </article>
           <article class="coverage-card reveal reveal-delay-1">
             <span class="coverage-num">04</span>
-            <h3 class="coverage-title">Corporate News</h3>
-            <p class="coverage-desc">Mergers, acquisitions, board appointments, and company filings.</p>
-            <span class="coverage-link" aria-hidden="true">Explore →</span>
+            <h3 class="coverage-title">PPP Advisory</h3>
+            <p class="coverage-desc">Guide feasibility, structuring, negotiation, and financial close for partnerships that allocate risk fairly.</p>
+            <span class="coverage-link" aria-hidden="true">Feasibility • Structuring • Close</span>
           </article>
           <article class="coverage-card reveal reveal-delay-2">
             <span class="coverage-num">05</span>
-            <h3 class="coverage-title">Investment Intelligence</h3>
-            <p class="coverage-desc">Portfolio insights, IPOs, rights issues, and analyst recommendations.</p>
-            <span class="coverage-link" aria-hidden="true">Explore →</span>
+            <h3 class="coverage-title">Investor Engagement</h3>
+            <p class="coverage-desc">Prepare data rooms, sharpen investment narratives, and connect institutions to credible capital partners.</p>
+            <span class="coverage-link" aria-hidden="true">DFIs • Funds • Strategic Capital</span>
           </article>
           <article class="coverage-card reveal reveal-delay-3">
             <span class="coverage-num">06</span>
-            <h3 class="coverage-title">Startups &amp; Innovation</h3>
-            <p class="coverage-desc">Fintech, funding rounds, tech ecosystem news and founder stories.</p>
-            <span class="coverage-link" aria-hidden="true">Explore →</span>
+            <h3 class="coverage-title">Operational Optimization</h3>
+            <p class="coverage-desc">Map value chains, redesign processes, and install performance systems that reduce waste and improve output.</p>
+            <span class="coverage-link" aria-hidden="true">Process • Value Chains • Performance</span>
+          </article>
+          <article class="coverage-card reveal reveal-delay-1">
+            <span class="coverage-num">07</span>
+            <h3 class="coverage-title">Governance Design</h3>
+            <p class="coverage-desc">Create governance frameworks, charters, and decision rights that separate oversight from management.</p>
+            <span class="coverage-link" aria-hidden="true">Boards • Charters • Decision Rights</span>
+          </article>
+          <article class="coverage-card reveal reveal-delay-2">
+            <span class="coverage-num">08</span>
+            <h3 class="coverage-title">Capacity Development</h3>
+            <p class="coverage-desc">Transfer capability through embedded coaching, training, and systems that remain effective after delivery.</p>
+            <span class="coverage-link" aria-hidden="true">Coaching • Training • Continuity</span>
           </article>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHY ASTUDITY -->
   <section id="why" class="section-wrap" aria-labelledby="why-heading">
     <span class="ghost-number" aria-hidden="true">02</span>
     <div class="section-content">
-      <div class="container" style="padding-block: clamp(4rem, 8vw, 6rem);">
+      <div class="container">
         <div class="why-grid">
-          <!-- Left -->
           <div>
             <div class="section-badge reveal">Why Astudity</div>
             <h2 class="why-heading reveal reveal-delay-1" id="why-heading">
-              Trusted by investors<br>across Nigeria.
+              Building institutions,<br>not just fixing them.
             </h2>
             <p class="why-body reveal reveal-delay-2">
-              From Maitama boardrooms to Lagos trading floors, Astudity delivers the financial clarity that Nigeria's business community demands. No noise — just intelligence.
+              Astudity Limited is a strategic advisory and implementation firm focused on one outcome: institutional strength. We interpret every mandate as an end-to-end institutional build — aligning purpose, structure, people, systems, and capital so organizations can perform, scale, and adapt.
             </p>
-            <a href="#about" class="why-team-link reveal reveal-delay-2">About our team →</a>
+            <a href="#about" class="why-team-link reveal reveal-delay-2">Read who we are →</a>
           </div>
 
-          <!-- Right: features -->
           <div class="why-features">
             <div class="why-feature reveal reveal-delay-1">
-              <svg class="why-feature-check" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#f5c518" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="4 10 8 14 16 6"/>
-              </svg>
+              <svg class="why-feature-check" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#f5c518" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 10 8 14 16 6"/></svg>
               <div>
-                <p class="why-feature-title">Real-Time Accuracy</p>
-                <p class="why-feature-desc">News verified and published as it breaks.</p>
+                <p class="why-feature-title">Built for Permanence</p>
+                <p class="why-feature-desc">We do not optimize for reports. We build institutions that outlive the project and keep performing.</p>
               </div>
             </div>
             <div class="why-feature reveal reveal-delay-2">
-              <svg class="why-feature-check" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#f5c518" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="4 10 8 14 16 6"/>
-              </svg>
+              <svg class="why-feature-check" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#f5c518" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 10 8 14 16 6"/></svg>
               <div>
-                <p class="why-feature-title">Nigerian Market Focus</p>
-                <p class="why-feature-desc">We cover what matters to Nigerian investors specifically.</p>
+                <p class="why-feature-title">Clarity Over Complexity</p>
+                <p class="why-feature-desc">Complex mandates need clear operating models, honest diagnosis, and disciplined implementation.</p>
               </div>
             </div>
             <div class="why-feature reveal reveal-delay-3">
-              <svg class="why-feature-check" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#f5c518" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="4 10 8 14 16 6"/>
-              </svg>
+              <svg class="why-feature-check" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#f5c518" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 10 8 14 16 6"/></svg>
               <div>
-                <p class="why-feature-title">Expert Analysis</p>
-                <p class="why-feature-desc">Backed by financial professionals and market analysts.</p>
-              </div>
-            </div>
-            <div class="why-feature reveal reveal-delay-1">
-              <svg class="why-feature-check" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#f5c518" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="4 10 8 14 16 6"/>
-              </svg>
-              <div>
-                <p class="why-feature-title">Free &amp; Accessible</p>
-                <p class="why-feature-desc">No paywall. Quality business intelligence for everyone.</p>
+                <p class="why-feature-title">Accountability Embedded</p>
+                <p class="why-feature-desc">Governance, KPIs, and decision rights are built into the operating model from day one.</p>
               </div>
             </div>
           </div>
@@ -1405,162 +998,93 @@
     </div>
   </section>
 
-  <!-- LATEST NEWS -->
   <section id="news" class="section-wrap" aria-labelledby="news-heading">
     <span class="ghost-number" aria-hidden="true">03</span>
     <div class="section-content">
-      <div class="container" style="padding-block: clamp(4rem, 8vw, 6rem);">
+      <div class="container">
         <div class="news-header">
-          <div class="section-badge reveal">Latest News</div>
+          <div class="section-badge reveal">Our Approach</div>
           <h2 class="news-heading reveal reveal-delay-1" id="news-heading">
-            What's moving<br>markets today.
+            Diagnose to deliver,<br>end to end.
           </h2>
         </div>
         <div class="news-grid">
-          <!-- Card 1 -->
           <article class="news-card reveal reveal-delay-1">
-            <div class="news-card-banner" style="background: linear-gradient(135deg, #0d1f3c, #1a3a5c);" role="img" aria-label="Markets category banner"></div>
-            <div class="news-card-body">
-              <span class="news-category">Markets</span>
-              <h3 class="news-headline">NGX All-Share Index Climbs 2.3% as Banking Stocks Lead Rally</h3>
-              <p class="news-summary">Investor sentiment strengthened following positive Q1 earnings from Nigeria's top-tier banks, driving the composite index to a 3-month high.</p>
-              <div class="news-footer">
-                <time class="news-time" datetime="2026-05-29">May 29, 2026</time>
-                <span class="news-read-more">Read More →</span>
-              </div>
-            </div>
+            <div class="news-card-tag">01 • Diagnose</div>
+            <h3>Find the real constraints.</h3>
+            <p>We begin with rapid institutional assessment to identify the bottlenecks that actually matter — strategic, structural, financial, operational, or human.</p>
           </article>
-          <!-- Card 2 -->
           <article class="news-card reveal reveal-delay-2">
-            <div class="news-card-banner" style="background: linear-gradient(135deg, #1a1a0d, #3a3a00);" role="img" aria-label="Banking category banner"></div>
-            <div class="news-card-body">
-              <span class="news-category">Banking</span>
-              <h3 class="news-headline">CBN Holds MPR at 27.5% Amid Inflation Pressure</h3>
-              <p class="news-summary">The Central Bank of Nigeria's Monetary Policy Committee voted unanimously to maintain rates, signaling cautious optimism on disinflation trajectory.</p>
-              <div class="news-footer">
-                <time class="news-time" datetime="2026-05-29">May 29, 2026</time>
-                <span class="news-read-more">Read More →</span>
-              </div>
-            </div>
+            <div class="news-card-tag">02 • Design</div>
+            <h3>Blueprint the future institution.</h3>
+            <p>Strategy, org model, governance, technology stack, and funding model are designed as one connected system rather than isolated workstreams.</p>
           </article>
-          <!-- Card 3 -->
           <article class="news-card reveal reveal-delay-3">
-            <div class="news-card-banner" style="background: linear-gradient(135deg, #0d1f0d, #1a3a1a);" role="img" aria-label="Economy category banner"></div>
-            <div class="news-card-body">
-              <span class="news-category">Economy</span>
-              <h3 class="news-headline">Nigeria's GDP Grows 3.8% in Q1 2026, Driven by Oil Sector</h3>
-              <p class="news-summary">The National Bureau of Statistics confirmed the growth figure, outpacing analyst forecasts of 3.1% amid improved crude production.</p>
-              <div class="news-footer">
-                <time class="news-time" datetime="2026-05-28">May 28, 2026</time>
-                <span class="news-read-more">Read More →</span>
-              </div>
-            </div>
+            <div class="news-card-tag">03 • Deploy</div>
+            <h3>Implement with discipline.</h3>
+            <p>We install systems, run programs, and manage change in the field. Our role does not stop at recommendations.</p>
           </article>
-          <!-- Card 4 -->
           <article class="news-card reveal reveal-delay-1">
-            <div class="news-card-banner" style="background: linear-gradient(135deg, #1f0d0d, #3a1a1a);" role="img" aria-label="Corporate category banner"></div>
-            <div class="news-card-body">
-              <span class="news-category">Corporate</span>
-              <h3 class="news-headline">Access Bank Completes Standard Chartered Gambia Acquisition</h3>
-              <p class="news-summary">The deal marks a significant expansion of Access Bank's pan-African footprint, adding 12 branches and $340M in assets under management.</p>
-              <div class="news-footer">
-                <time class="news-time" datetime="2026-05-27">May 27, 2026</time>
-                <span class="news-read-more">Read More →</span>
-              </div>
-            </div>
+            <div class="news-card-tag">04 • Develop</div>
+            <h3>Transfer the capability.</h3>
+            <p>Leaders and teams are coached to operate the new model independently so performance does not depend on continued external support.</p>
           </article>
-          <!-- Card 5 -->
           <article class="news-card reveal reveal-delay-2">
-            <div class="news-card-banner" style="background: linear-gradient(135deg, #1a0d1f, #2d1a3a);" role="img" aria-label="Fintech category banner"></div>
-            <div class="news-card-body">
-              <span class="news-category">Fintech</span>
-              <h3 class="news-headline">FBN Holdings Launches ₦150bn Rights Issue at ₦25 Per Share</h3>
-              <p class="news-summary">The offer targets both institutional and retail investors as the group seeks capital to fund its 2026 digital transformation strategy.</p>
-              <div class="news-footer">
-                <time class="news-time" datetime="2026-05-27">May 27, 2026</time>
-                <span class="news-read-more">Read More →</span>
-              </div>
-            </div>
+            <div class="news-card-tag">05 • Deliver</div>
+            <h3>Measure what changed.</h3>
+            <p>We track outcomes against KPIs tied to service delivery, cost, revenue, institutional resilience, and operating performance.</p>
           </article>
-          <!-- Card 6 -->
           <article class="news-card reveal reveal-delay-3">
-            <div class="news-card-banner" style="background: linear-gradient(135deg, #0d1f1f, #1a3a3a);" role="img" aria-label="Investment category banner"></div>
-            <div class="news-card-body">
-              <span class="news-category">Investment</span>
-              <h3 class="news-headline">Dangote Cement Posts Record Revenue, Declares ₦30 Dividend</h3>
-              <p class="news-summary">Strong domestic demand and export volumes pushed revenue to an all-time high, with the board approving a final dividend payout for shareholders.</p>
-              <div class="news-footer">
-                <time class="news-time" datetime="2026-05-26">May 26, 2026</time>
-                <span class="news-read-more">Read More →</span>
-              </div>
-            </div>
+            <div class="news-card-tag">Why it matters</div>
+            <h3>One accountable partner.</h3>
+            <p>This model gives clients coherence: one team responsible from concept through operational independence and sustained results.</p>
           </article>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
   <section id="trust" class="section-wrap" aria-labelledby="trust-heading">
     <span class="ghost-number" aria-hidden="true">04</span>
     <div class="section-content">
-      <div class="container" style="padding-block: clamp(4rem, 8vw, 6rem);">
+      <div class="container">
         <div class="trust-header">
-          <div class="section-badge reveal">Reader Voices</div>
+          <div class="section-badge reveal">Who We Serve</div>
           <h2 class="trust-heading reveal reveal-delay-1" id="trust-heading">
-            Trusted by Nigeria's<br>business community.
+            Clients building<br>institutions that matter.
           </h2>
         </div>
-        <div class="testimonials-scroll" role="list" aria-label="Reader testimonials">
+        <div class="testimonials-scroll" role="list" aria-label="Client categories">
           <div class="testimonial-card reveal reveal-delay-1" role="listitem">
-            <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
-            <blockquote class="testimonial-quote">
-              "Astudity is the first thing I open every morning. The market analysis is sharp, concise, and always on time."
-            </blockquote>
+            <div class="testimonial-stars">Governments</div>
+            <blockquote class="testimonial-quote">Governments and public agencies modernizing service delivery, strengthening institutions, and attracting private investment.</blockquote>
             <div class="testimonial-author">
-              <div class="testimonial-avatar" aria-hidden="true">EO</div>
+              <div class="testimonial-avatar" aria-hidden="true">GA</div>
               <div>
-                <p class="testimonial-name">Emeka Okonkwo</p>
-                <p class="testimonial-role">Portfolio Manager, Lagos</p>
+                <p class="testimonial-name">Public Sector</p>
+                <p class="testimonial-role">Delivery reform • PPP enablement</p>
               </div>
             </div>
           </div>
           <div class="testimonial-card reveal reveal-delay-2" role="listitem">
-            <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
-            <blockquote class="testimonial-quote">
-              "Finally a Nigerian financial news platform that doesn't dumb things down. This is exactly what our market needs."
-            </blockquote>
+            <div class="testimonial-stars">Funds</div>
+            <blockquote class="testimonial-quote">Development finance institutions and funds structuring, de-risking, and operationalizing capital deployments at scale.</blockquote>
             <div class="testimonial-author">
-              <div class="testimonial-avatar" aria-hidden="true">AM</div>
+              <div class="testimonial-avatar" aria-hidden="true">DF</div>
               <div>
-                <p class="testimonial-name">Adaeze Musa</p>
-                <p class="testimonial-role">Investment Analyst, Abuja</p>
+                <p class="testimonial-name">Capital Providers</p>
+                <p class="testimonial-role">Risk design • Investment readiness</p>
               </div>
             </div>
           </div>
           <div class="testimonial-card reveal reveal-delay-3" role="listitem">
-            <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
-            <blockquote class="testimonial-quote">
-              "I've recommended Astudity to every founder in my network. Understanding the capital market has never been this accessible."
-            </blockquote>
+            <div class="testimonial-stars">Enterprises</div>
+            <blockquote class="testimonial-quote">Enterprises, holding companies, and project sponsors restructuring for growth, expansion, new market entry, and bankable partnerships.</blockquote>
             <div class="testimonial-author">
-              <div class="testimonial-avatar" aria-hidden="true">TB</div>
+              <div class="testimonial-avatar" aria-hidden="true">EN</div>
               <div>
-                <p class="testimonial-name">Tunde Bakare</p>
-                <p class="testimonial-role">Founder &amp; CEO, TechBridge Solutions</p>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-card reveal reveal-delay-1" role="listitem">
-            <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
-            <blockquote class="testimonial-quote">
-              "The depth of corporate coverage on Astudity rivals what you'd find in international financial publications."
-            </blockquote>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar" aria-hidden="true">KA</div>
-              <div>
-                <p class="testimonial-name">Kemi Adeyemi</p>
-                <p class="testimonial-role">CFO, Luminary Group</p>
+                <p class="testimonial-name">Commercial Clients</p>
+                <p class="testimonial-role">Restructuring • Scale • Market entry</p>
               </div>
             </div>
           </div>
@@ -1569,62 +1093,50 @@
     </div>
   </section>
 
-  <!-- NEWSLETTER -->
   <section id="newsletter" aria-labelledby="newsletter-heading">
     <div class="container">
-      <div class="newsletter-inner">
-        <h2 class="newsletter-heading" id="newsletter-heading">
-          Get Nigeria's top business news<br>delivered to your inbox daily.
-        </h2>
-        <p class="newsletter-sub">Join 50,000+ readers. Free. No spam. Unsubscribe anytime.</p>
-        <form class="newsletter-form" action="#" method="post" onsubmit="handleNewsletterSubmit(event)" aria-label="Newsletter signup">
-          <label for="newsletter-email" class="sr-only">Email address</label>
-          <input
-            type="email"
-            id="newsletter-email"
-            name="email"
-            class="newsletter-input"
-            placeholder="Your email address"
-            required
-            autocomplete="email"
-          />
-          <button type="submit" class="newsletter-btn">Subscribe Free</button>
-        </form>
+      <div class="newsletter-inner reveal">
+        <div>
+          <div class="section-badge">Executive Summary</div>
+          <h2 class="newsletter-heading" id="newsletter-heading">Astudity Limited | Institutional Build Partner</h2>
+          <p class="newsletter-copy">
+            Our mission is to design and operationalize institutions that deliver sustained public and commercial value. We integrate strategy, institution design, technology, PPP advisory, investor engagement, operations, governance, and capacity building into one implementation-led model.
+          </p>
+        </div>
+        <div class="newsletter-actions">
+          <a href="#markets" class="btn-primary">View Capabilities</a>
+          <a href="#contact" class="btn-ghost">Request a Conversation</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section id="about" class="section-wrap" aria-labelledby="about-heading">
     <span class="ghost-number" aria-hidden="true">05</span>
     <div class="section-content">
-      <div class="container" style="padding-block: clamp(4rem, 8vw, 6rem);">
+      <div class="container">
         <div class="about-grid">
-          <!-- Left -->
           <div>
             <div class="section-badge reveal">About Astudity</div>
             <h2 class="about-heading reveal reveal-delay-1" id="about-heading">
-              Nigeria's capital market,<br>made clear.
+              Global perspective.<br>Local deployment.
             </h2>
             <div class="about-body reveal reveal-delay-2">
-              <p>Astudity Limited is a business intelligence and financial media company based in Maitama, Abuja. We exist to democratize access to high-quality financial information for Nigeria's growing investor and entrepreneurial community.</p>
-              <p>From daily market summaries to in-depth corporate analysis, our team of financial journalists and analysts work around the clock to keep you ahead of the curve.</p>
+              <p>Astudity Limited works with governments, funds, and enterprises where complexity meets ambition. We turn institutional vision into operating reality by aligning purpose, structure, people, systems, governance, and capital.</p>
+              <p>Headquartered globally and deployed locally, we combine global benchmarks with deep contextual understanding to deliver solutions that work on the ground — not just on paper.</p>
+              <p>Sectors include infrastructure, energy, health, education, agriculture, public administration, and financial services.</p>
             </div>
           </div>
 
-          <!-- Right: contact card -->
           <div class="contact-card reveal reveal-delay-2" id="contact">
-            <h3 class="contact-card-title">Get in Touch</h3>
+            <h3 class="contact-card-title">Connect with Astudity</h3>
 
             <div class="contact-row">
               <svg class="contact-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#f5c518" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M9 1C6.24 1 4 3.24 4 6c0 4.25 5 11 5 11s5-6.75 5-11c0-2.76-2.24-5-5-5z"/>
                 <circle cx="9" cy="6" r="1.5"/>
               </svg>
-              <p class="contact-text">
-                3B, Baltic Crescent, Off Danube Street,<br>
-                Maitama, Abuja, Nigeria 900001
-              </p>
+              <p class="contact-text">Global headquarters. Local deployment. Add your preferred office address or regional contact hub here.</p>
             </div>
 
             <div class="contact-row">
@@ -1642,114 +1154,41 @@
               <p class="contact-text"><a href="mailto:info@astudity.com">info@astudity.com</a></p>
             </div>
 
-            <button class="contact-btn" type="button" onclick="window.location.href='mailto:info@astudity.com'">Send Us a Message</button>
+            <button class="contact-btn" type="button" onclick="window.location.href='mailto:info@astudity.com'">Talk to Our Team</button>
           </div>
         </div>
       </div>
     </div>
   </section>
-
 </main>
 
-<!-- ============================================================
-     FOOTER
-============================================================ -->
-<footer aria-label="Site footer">
+<footer>
   <div class="container">
-    <div class="footer-grid">
-      <!-- Column 1: Brand -->
-      <div>
-        <a href="#home" class="nav-logo" aria-label="Astudity home" style="margin-bottom: 0;">
-          <svg class="brand-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="32" height="32" rx="6" fill="#f5c518" opacity="0.12"/>
-            <path d="M16 6L7 26h4.2l1.8-4.5h6L20.8 26H25L16 6zm0 5.6l2.1 7.4H13.9L16 11.6z" fill="#f5c518"/>
-          </svg>
-          <span class="nav-logo-text">Astudity</span>
-        </a>
-        <p class="footer-tagline">Nigeria's Business Intelligence, Simplified.</p>
-        <div class="footer-socials" aria-label="Social media links">
-          <!-- LinkedIn -->
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Astudity on LinkedIn">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path d="M16.667 1.667H3.333A1.667 1.667 0 0 0 1.667 3.333v13.334a1.667 1.667 0 0 0 1.666 1.666h13.334a1.667 1.667 0 0 0 1.666-1.666V3.333a1.667 1.667 0 0 0-1.666-1.666zM6.667 14.167H4.167V7.5h2.5v6.667zm-1.25-7.584A1.25 1.25 0 1 1 5.417 4.583a1.25 1.25 0 0 1 0 2.5zM15.833 14.167H13.333v-3.334c0-.833-.416-1.25-1.25-1.25s-1.25.417-1.25 1.25v3.334H8.333V7.5h2.5v.972c.416-.694 1.25-1.222 2.083-1.222 1.667 0 2.917 1.25 2.917 3.333v3.584z"/>
-            </svg>
-          </a>
-          <!-- Twitter/X -->
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Astudity on X (Twitter)">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path d="M15.27 1.667h2.857l-6.24 7.13 7.34 9.703h-5.746l-4.502-5.885-5.15 5.885H.976l6.673-7.625L.333 1.667h5.89l4.069 5.38 5.977-5.38zm-1.002 15.1h1.583L5.84 3.29H4.146L14.268 16.766z"/>
-            </svg>
-          </a>
-          <!-- Instagram -->
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Astudity on Instagram">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="2" y="2" width="16" height="16" rx="4"/>
-              <circle cx="10" cy="10" r="3.5"/>
-              <circle cx="14.5" cy="5.5" r="0.75" fill="currentColor" stroke="none"/>
-            </svg>
-          </a>
-        </div>
+    <div class="footer-inner">
+      <p>© 2026 Astudity Limited. Institutional build for governments, funds, and enterprises.</p>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#markets">Capabilities</a>
+        <a href="#news">Approach</a>
+        <a href="#contact">Contact</a>
       </div>
-
-      <!-- Column 2: Coverage -->
-      <nav aria-label="Coverage links">
-        <p class="footer-col-heading">Coverage</p>
-        <div class="footer-links">
-          <a href="#markets">NGX Markets</a>
-          <a href="#markets">Banking</a>
-          <a href="#markets">Economy</a>
-          <a href="#markets">Corporate News</a>
-          <a href="#markets">Investment Intel</a>
-          <a href="#markets">Fintech</a>
-        </div>
-      </nav>
-
-      <!-- Column 3: Company -->
-      <nav aria-label="Company links">
-        <p class="footer-col-heading">Company</p>
-        <div class="footer-links">
-          <a href="#about">About Us</a>
-          <a href="#about">Our Team</a>
-          <a href="mailto:info@astudity.com">Advertise</a>
-          <a href="#about">Privacy Policy</a>
-          <a href="#about">Terms of Use</a>
-        </div>
-      </nav>
-
-      <!-- Column 4: Contact -->
-      <div>
-        <p class="footer-col-heading">Contact</p>
-        <p class="footer-contact-item"><a href="mailto:info@astudity.com">info@astudity.com</a></p>
-        <p class="footer-contact-item"><a href="tel:+2348032244244">+234 803 224 4244</a></p>
-        <p class="footer-contact-item">Maitama, Abuja, Nigeria</p>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <span>© 2026 Astudity Limited. All rights reserved.</span>
-      <span>Built for Nigeria's financial community.</span>
     </div>
   </div>
 </footer>
 
-<!-- ============================================================
-     JAVASCRIPT
-============================================================ -->
 <script>
-  // ── Sticky nav scroll behavior ──
   const nav = document.getElementById('main-nav');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 60);
   }, { passive: true });
 
-  // ── Hamburger toggle ──
   const hamburgerBtn = document.getElementById('hamburger-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   hamburgerBtn.addEventListener('click', () => {
     const isOpen = mobileMenu.classList.toggle('open');
-    hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+    hamburgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
-  // Close mobile menu when a link is clicked
+
   mobileMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       mobileMenu.classList.remove('open');
@@ -1757,53 +1196,32 @@
     });
   });
 
-  // ── Scroll reveal ──
-  const revealObserver = new IntersectionObserver(
-    entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-    { threshold: 0.1 }
-  );
-  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
 
-  // Respect reduced motion — show everything immediately
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
-  }
-
-  // ── Active nav link detection ──
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a[data-nav-section]');
-  const sectionObserver = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const sectionId = entry.target.id;
-          navLinks.forEach(link => {
-            const target = link.getAttribute('data-nav-section');
-            link.classList.toggle('active', target === sectionId || (sectionId === 'home' && target === 'home'));
-          });
-        }
-      });
-    },
-    { threshold: 0.4 }
-  );
-  sections.forEach(section => sectionObserver.observe(section));
-
-  // ── Newsletter form handler ──
-  function handleNewsletterSubmit(e) {
-    e.preventDefault();
-    const input = document.getElementById('newsletter-email');
-    const btn = e.target.querySelector('.newsletter-btn');
-    if (!input.value) return;
-    btn.textContent = '✓ Subscribed!';
-    btn.style.background = '#000';
-    btn.disabled = true;
-    input.value = '';
-    setTimeout(() => {
-      btn.textContent = 'Subscribe Free';
-      btn.disabled = false;
-    }, 3000);
-  }
+  const navLinks = document.querySelectorAll('[data-nav-section]');
+  const sections = Array.from(navLinks).map(link => document.getElementById(link.getAttribute('href').slice(1))).filter(Boolean);
+  const setActiveLink = () => {
+    let currentId = '';
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 120 && rect.bottom >= 120) currentId = section.id;
+    });
+    navLinks.forEach(link => {
+      const targetId = link.getAttribute('href').slice(1);
+      link.classList.toggle('active', targetId === currentId);
+    });
+  };
+  window.addEventListener('scroll', setActiveLink, { passive: true });
+  setActiveLink();
 </script>
-
 </body>
 </html>
